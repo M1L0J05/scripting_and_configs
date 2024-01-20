@@ -17,7 +17,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 /usr/bin/feh --bg-fill /home/kkrot/Downloads/wallpapers/wallpaper.jpg &
-vmware-user-suid-wrapper &
+/usr/bin/vmware-user-suid-wrapper &
 ~/.config/polybar/launch.sh &
 picom &
 wmname LG3D &
