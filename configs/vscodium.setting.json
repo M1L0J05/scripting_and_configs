@@ -1,0 +1,36 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Two Monokai Flat",
+    "workbench.iconTheme": "material-icon-theme",
+
+    "terminal.integrated.fontFamily": "Hack",
+    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.defaultProfile.linux": "bash",
+
+    "editor.scrollbar.vertical": "hidden",
+    "editor.cursorBlinking": "expand",
+    "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'Hack', ",
+    "editor.fontSize": 13,
+    "editor.overviewRulerBorder":false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.glyphMargin": false,
+    "editor.renderLineHighlight": "gutter",
+    "editor.linkedEditing": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.guides.indentation":false,
+    "editor.accessibilityPageSize": 11,
+    "editor.autoClosingBrackets": "always",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "always",
+    "indentRainbow.lightIndicatorStyleLineWidth": 2,
+    "window.zoomLevel": 1,
+
+}
