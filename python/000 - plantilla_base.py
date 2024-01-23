@@ -8,30 +8,52 @@ import sys, time, signal
 ### IMPORTS LOCALES ###
 
 
-### Paleta de colores ###
-### FUNCIONES PREDEFINIDAS PARA IMPRIMIR EN COLORES ###
-def error_1(skk): print("\033[91m{}\033[0m" .format(skk))       ###--- ROJO 1 ---###
-def error_2(skk): print("\033[1;91m{}\033[0m" .format(skk))     ###--- ROJO 2 ---###
-def info_1(skk): print("\033[34m{}\033[0m" .format(skk))        ###--- AZUL 1 ---###
-def info_2(skk): print("\033[1;34m{}\033[0m" .format(skk))      ###--- AZUL 2 ---###
-def info_3(skk): print("\033[96m{}\033[0m" .format(skk))        ###--- CYAN 1 ---###
-def info_4(skk): print("\033[1;96m{}\033[0m" .format(skk))      ###--- CYAN 2 ---###
-def succes_1(skk): print("\033[32m{}\033[0m" .format(skk))      ###--- VERDE 1 ---###
-def succes_2(skk): print("\033[1;32m{}\033[0m" .format(skk))    ###--- VERDE 2 ---###
-def warning_1(skk): print("\033[33m{}\033[0m" .format(skk))     ###--- AMARILLO 1 ---###
-def warning_2(skk): print("\033[1;33m{}\033[0m" .format(skk))   ###--- AMARILLO 2 ---###
-def debug_1(skk): print("\033[90m{}\033[0m" .format(skk))       ###--- GRIS 1 ---###
-def debug_2(skk): print("\033[1;90m{}\033[0m" .format(skk))     ###--- GRIS 2 ---###
-def debug_3(skk): print("\033[95m{}\033[0m" .format(skk))       ###--- PURPURA 1 ---###
-def debug_4(skk): print("\033[1;95m{}\033[0m" .format(skk))     ###--- PURPURA 2 ---###
-def others_1(skk): print("\033[30m{}\033[0m" .format(skk))      ###--- NEGRO 1 ---###
-def standard_1(skk): print("\033[37m{}\033[0m" .format(skk))    ###--- BLANCO 1 ---###
-def standard_2(skk): print("\033[1;37m{}\033[0m" .format(skk))  ###--- BLANCO 2 ---###
+# Colores y estilos
+COLOR_RED = '91'
+COLOR_BLUE = '34'
+COLOR_CYAN = '96'
+COLOR_GREEN = '32'
+COLOR_YELLOW = '33'
+COLOR_GRAY = '90'
+COLOR_PURPLE = '95'
+COLOR_BLACK = '30'
+COLOR_WHITE = '37'
+
+# Funcion generica para imprimir en color
+def color_text(text, color_code, bold=False):
+    bold_code = '1;' if bold else ''    
+    return f"\033[{bold_code}{color_code}m{text}\033[0m"
+
+# Funciones de impresión
+def error(text, bold=False): print(color_text(text, COLOR_RED, bold=bold))       ###--- ROJO ---###
+def info(text, bold=False): print(color_text(text, COLOR_BLUE, bold=bold))       ###--- AZUL ---###
+def info_2(text, bold=False): print(color_text(text, COLOR_CYAN, bold=bold))     ###--- CYAN ---###
+def succes(text, bold=False): print(color_text(text, COLOR_GREEN, bold=bold))    ###--- VERDE ---###
+def warning(text, bold=False): print(color_text(text, COLOR_YELLOW, bold=bold))  ###--- AMARILLO ---###
+def debug(text, bold=False): print(color_text(text, COLOR_PURPLE, bold=bold))    ###--- PURPURA ---###
+def debug_2(text, bold=False): print(color_text(text, COLOR_GRAY, bold=bold))    ###--- GRIS ---###
+def others(text, bold=False): print(color_text(text, COLOR_BLACK, bold=bold))    ###--- NEGRO ---###
+def standard(text, bold=False): print(color_text(text, COLOR_WHITE, bold=bold))  ###--- BLANCO ---###
+
+# Ejemplo de uso
+# Funciones prediseñadas
+info('[INFO] Esta es una información en azul.', bold=True)
+info_2('[INFO] Esta es una información en cyan.')
+error('[ERROR] Algo salió mal en rojo.')
+succes('[ÉXITO] Operación completada con éxito en verde.')
+warning('[ADVERTENCIA] Tenga cuidado en amarillo.')
+debug('[DEBUG] Este es un mensaje de depuración en purpura.')
+debug_2('[DEBUG] Este es un mensaje de depuración en gris.')
+others('[OTRO] Otro mensaje en negro.')
+standard('[ESTÁNDAR] Este es un mensaje estándar en blanco.')
+
+# Funcion generica
+print(color_text('[+] Probando la funcion generica', COLOR_BLUE, bold=True))
 
 
 ### Funcion de captura de Ctrl+c ###
 def sig_handler(sig, frame):
-    info_1("\n\n[!] Saliendo del programa ...\n")
+    warning("\n\n[!] Ejecucion cancelada por el usuario ...\n")
     sys.exit(1) 
 
 signal.signal(signal.SIGINT, sig_handler)
