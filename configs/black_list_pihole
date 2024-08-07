@@ -1,13 +1,13 @@
 # Lista de dominios propios para pi-hole
 
 # TV Samngsumng
-cdn.samsungcloudsolution.com
-umd-tv-cache.samsungnyc.com
-tvpnlogopeu.samsungcloud.tv
-tvpndynamiclogopeu.samsungcloud.tv
-lcprd1.samsungcloudsolution.net
+0.0.0.0 cdn.samsungcloudsolution.com
+0.0.0.0 umd-tv-cache.samsungnyc.com
+0.0.0.0 tvpnlogopeu.samsungcloud.tv
+0.0.0.0 tvpndynamiclogopeu.samsungcloud.tv
+0.0.0.0 lcprd1.samsungcloudsolution.net
 
 
 # Router Linksys
-www.belkin.com
-cloud1.linksyssmartwifi.com
+0.0.0.0 www.belkin.com
+0.0.0.0 cloud1.linksyssmartwifi.com
