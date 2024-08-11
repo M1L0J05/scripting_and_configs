@@ -6,6 +6,7 @@
 0.0.0.0 empdownprd.samsungcloudsolution.com
 0.0.0.0 gpm.samsungqbe.com
 0.0.0.0 lcprd1.samsungcloudsolution.net
+0.0.0.0 multiscreen.samsung.com
 0.0.0.0 notice.samsungcloudsolution.com
 0.0.0.0	noticecdn.samsungcloudsolution.com
 0.0.0.0 osb-apps.samsungqbe.com
@@ -19,6 +20,7 @@
 0.0.0.0 tvpnlinupepgpeu.samsungcloud.tv
 0.0.0.0 umd-tv-cache.samsungnyc.com
 0.0.0.0 www.samsungrm.net
+0.0.0.0 wwp.greenwichmeantime.com
 0.0.0.0 zpu.samsungelectronics.com
 
 # Router Linksys
